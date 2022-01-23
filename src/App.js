@@ -17,9 +17,7 @@ function App() {
       ></Header>
       <main>
         <Project
-          navSection={navSection}
           selectedNavSection={selectedNavSection}
-          setSelectedNavSection={setSelectedNavSection}
         ></Project>
       </main>
       <Footer></Footer>
