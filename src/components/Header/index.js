@@ -9,16 +9,11 @@ const Header = (props) => {
     setSelectedNavSection
   } = props;
 
-  // const [navSection] = useState(["About", "Portfolio", "Contact", "Resume"]);
-  // const [selectedNavSection, setSelectedNavSection] = useState(navSection[0]);
-
   return (
-    <header className='flex-row px-1'>
-      <h1>
-        <a data-testid="link" href="https://github.com/mtlankenau" target="_blank" rel="noreferrer">
-          Michael Lankenau
-        </a>
-      </h1>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4">Michael Lankenau</span>
+      </a>
       <Navigation
         navSection={navSection}
         selectedNavSection={selectedNavSection}

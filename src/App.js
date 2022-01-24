@@ -9,7 +9,7 @@ function App() {
   const [selectedNavSection, setSelectedNavSection] = useState(navSection[0]);
 
   return (
-    <div>
+    <div className="container">
       <Header
         navSection={navSection}
         selectedNavSection={selectedNavSection}

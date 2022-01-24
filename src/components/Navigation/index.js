@@ -10,10 +10,10 @@ const Navigation = (props) => {
 
   return (
     <nav>
-      <ul className="flex-row">
+      <ul className="nav nav-pills justify-content-end">
         {navSection.map((section) => (
-          <li className={`mx-1 ${selectedNavSection === section && `navActive`}`} key={section}>
-            <span onClick={() => {setSelectedNavSection(section)}}>{section}</span>
+          <li className="nav-item" key={section}>
+            <a className={`nav-link ${selectedNavSection === section && `active`}`} onClick={() => {setSelectedNavSection(section)}}>{section}</a>
           </li>
         ))}
       </ul>

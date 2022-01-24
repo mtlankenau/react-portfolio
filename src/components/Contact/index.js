@@ -38,28 +38,30 @@ const Contact = () => {
     <section>
       <h2 data-testid="h1tag">Contact Me</h2>
       <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
+        <div class="mb-3">
+          <label htmlFor="name" class="form-label">Name:</label>
+          <input type="text" defaultValue={name} onBlur={handleChange} class="form-control" placeholder="Your name" name="name" />
         </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input type="email" defaultValue={email} onBlur={handleChange} name="email"/>
+        <div class="mb-3">
+          <label htmlFor="email" class="form-label">Email address:</label>
+          <input type="email" defaultValue={email} onBlur={handleChange} name="email" class="form-control" placeholder="name@example.com"/>
         </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea defaultValue={message} onBlur={handleChange} name="message" rows="5" />
+        <div class="mb-3">
+          <label htmlFor="message" class="form-label">Message:</label>
+          <textarea defaultValue={message} onBlur={handleChange} name="message" rows="5" class="form-control" />
           {errorMessage && (
             <div>
               <p className="error-text">{errorMessage}</p>
             </div>
           )}
         </div>
-        <button data-testid="buttontag" type="submit">Submit</button>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        </div>
       </form>
       <div>
-        <h2>Send me an email: <a href="mailto: mtlankenau@gmail.com">mtlankenau@gmail.com</a></h2>
-        <h2>Call or text me at <a href="tel:7033899409">703-389-9409</a></h2>
+        <p>Send me an email: <a href="mailto: mtlankenau@gmail.com">mtlankenau@gmail.com</a></p>
+        <p>Call or text me at <a href="tel:7033899409">703-389-9409</a></p>
       </div>
     </section>
   );
