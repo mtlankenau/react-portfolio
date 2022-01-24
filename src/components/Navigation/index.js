@@ -9,7 +9,7 @@ const Navigation = (props) => {
   } = props;
 
   return (
-    <nav>
+    <nav className="nav justify-content-center">
       <ul className="nav nav-pills justify-content-end">
         {navSection.map((section) => (
           <li className="nav-item" key={section}>

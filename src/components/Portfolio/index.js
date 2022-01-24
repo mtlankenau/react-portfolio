@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 const Portfolio = () => {
 
@@ -49,18 +51,25 @@ const Portfolio = () => {
 
   return (
     <div>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <h2>
+        <span><FontAwesomeIcon icon={faLaptopCode} size="lg"/></span>
+        Portfolio
+      </h2>
+      <div className="row row-cols-1 row-cols-md-2 g-4">
         {projects.map((project) => (
-          <div class="col" key={project.name}>
-            <div class="card">
-              <img
-                src={require(`../../assets/${project.screenshot}`)}
-                className="card-img-top"
-                alt={project.name}
-              />
-              <div class="card-body">
-                <h5 class="card-title">{project.name}</h5>
-                <p class="card-text">{project.description}</p>
+          <div className="col" key={project.name}>
+            <div className="card">
+              <a href={project.link} target="_blank" rel="noreferrer">
+                <img
+                  src={require(`../../assets/${project.screenshot}`)}
+                  className="card-img-top"
+                  alt={project.name}
+                />
+              </a>
+              <div className="card-body">
+                <h5 className="card-title">{project.name}</h5>
+                <p className="card-text">{project.description}</p>
+                <a href={project.repo} target="_blank" rel="noreferrer">View GitHub repository here</a>
               </div>
             </div>
           </div>

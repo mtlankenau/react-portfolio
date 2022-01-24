@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
 
 const Contact = () => {
 
@@ -36,32 +39,35 @@ const Contact = () => {
 
   return (
     <section>
-      <h2 data-testid="h1tag">Contact Me</h2>
+      <h2 data-testid="h1tag">
+        <span><FontAwesomeIcon icon={faPaperPlane} size="lg" /></span>
+        Contact Me
+      </h2>
       <form id="contact-form" onSubmit={handleSubmit}>
-        <div class="mb-3">
-          <label htmlFor="name" class="form-label">Name:</label>
-          <input type="text" defaultValue={name} onBlur={handleChange} class="form-control" placeholder="Your name" name="name" />
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">Name:</label>
+          <input type="text" defaultValue={name} onBlur={handleChange} className="form-control" placeholder="Your name" name="name" />
         </div>
-        <div class="mb-3">
-          <label htmlFor="email" class="form-label">Email address:</label>
-          <input type="email" defaultValue={email} onBlur={handleChange} name="email" class="form-control" placeholder="name@example.com"/>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email address:</label>
+          <input type="email" defaultValue={email} onBlur={handleChange} name="email" className="form-control" placeholder="name@example.com"/>
         </div>
-        <div class="mb-3">
-          <label htmlFor="message" class="form-label">Message:</label>
-          <textarea defaultValue={message} onBlur={handleChange} name="message" rows="5" class="form-control" />
+        <div className="mb-3">
+          <label htmlFor="message" className="form-label">Message:</label>
+          <textarea defaultValue={message} onBlur={handleChange} name="message" rows="5" className="form-control" />
           {errorMessage && (
             <div>
               <p className="error-text">{errorMessage}</p>
             </div>
           )}
         </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        <div className="col-auto">
+          <button type="submit" className="btn btn-primary mb-3">Submit</button>
         </div>
       </form>
       <div>
         <p>Send me an email: <a href="mailto: mtlankenau@gmail.com">mtlankenau@gmail.com</a></p>
-        <p>Call or text me at <a href="tel:7033899409">703-389-9409</a></p>
+        <p>Call or text me: <a href="tel:7033899409">703-389-9409</a></p>
       </div>
     </section>
   );

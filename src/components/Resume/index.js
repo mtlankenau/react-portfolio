@@ -1,11 +1,17 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faScroll } from '@fortawesome/free-solid-svg-icons';
+import resume from '../../assets/mtlankenau-resume.pdf';
 
 const Resume = () => {
-  
+
   return (
     <section>
-      <h2>Resume</h2>
-      <a href="">View my resume here!</a>
+      <h2>
+        <span><FontAwesomeIcon icon={faScroll} size="lg"/></span>
+        Resume
+      </h2>
+      <a href={resume} download="mtlankenau-resume.pdf">Download my resume here</a>
       <div>
         <h3>Front-End Skills</h3>
         <ul>
