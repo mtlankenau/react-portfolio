@@ -13,7 +13,7 @@ const Navigation = (props) => {
       <ul className="nav nav-pills justify-content-end">
         {navSection.map((section) => (
           <li className="nav-item" key={section}>
-            <a className={`nav-link ${selectedNavSection === section && `active`}`} onClick={() => {setSelectedNavSection(section)}}>{section}</a>
+            <a className={`nav-link btn ${selectedNavSection === section && `active`}`} onClick={() => {setSelectedNavSection(section)}}>{section}</a>
           </li>
         ))}
       </ul>
