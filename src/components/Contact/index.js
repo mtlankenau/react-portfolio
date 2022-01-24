@@ -40,7 +40,7 @@ const Contact = () => {
   return (
     <section>
       <h2 data-testid="h1tag">
-        <span><FontAwesomeIcon icon={faPaperPlane} size="lg" /></span>
+        <span><FontAwesomeIcon icon={faPaperPlane} size="lg" className="py-1"/></span>
         Contact Me
       </h2>
       <form id="contact-form" onSubmit={handleSubmit}>

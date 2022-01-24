@@ -5,33 +5,30 @@ import resume from '../../assets/mtlankenau-resume.pdf';
 
 const Resume = () => {
 
+  const frontEndSkills = ["HTML", "CSS", "JavaScript", "jQuery", "Responsive Design", "React", "Bootstrap"];
+  const backEndSkills = ["APIs", "Node", "Express", "MySQL & Sequelize", "MongoDB & Mongoose", "REST", "GraphQL"];
+
   return (
     <section>
       <h2>
-        <span><FontAwesomeIcon icon={faScroll} size="lg"/></span>
+        <span><FontAwesomeIcon icon={faScroll} size="lg" className="py-1"/></span>
         Resume
       </h2>
-      <a href={resume} download="mtlankenau-resume.pdf">Download my resume here</a>
+      <a href={resume} download="mtlankenau-resume.pdf" className="btn btn-primary mt-2 mb-4">Download my resume here</a>
       <div>
         <h3>Front-End Skills</h3>
         <ul>
-          <li>Skill 1</li>
-          <li>Skill 2</li>
-          <li>Skill 3</li>
-          <li>Skill 4</li>
-          <li>Skill 5</li>
-          <li>Skill 6</li>
+          {frontEndSkills.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
         </ul>
       </div>
       <div>
         <h3>Back-End Skills</h3>
         <ul>
-          <li>Skill 1</li>
-          <li>Skill 2</li>
-          <li>Skill 3</li>
-          <li>Skill 4</li>
-          <li>Skill 5</li>
-          <li>Skill 6</li>
+          {backEndSkills.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
         </ul>
       </div>
     </section>
