@@ -6,6 +6,13 @@ const Portfolio = () => {
 
   const projects = [
     {
+      name: "Greg's List",
+      screenshot: "gregs-list.jpg",
+      link: "http://gregs-list-1.herokuapp.com/",
+      repo: "https://github.com/mtlankenau/gregs-list",
+      description: "Looking for or offering a particular job, gig, or service? Weclome - Greg's List is the perfect place for you."
+    },
+    {
       name: "Pokegen",
       screenshot: "pokegen.jpg",
       link: "https://desolate-ridge-10974.herokuapp.com/",
